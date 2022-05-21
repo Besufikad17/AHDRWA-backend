@@ -1,4 +1,5 @@
 {
     "localMongoURI": "mongodb://localhost:27017/AHDRWA",
+    "hostedMongoURI": "mongodb+srv://besufikad:wZd7nSvFjoC6to31@cluster0.yuorq.mongodb.net/?retryWrites=true&w=majority",
     "jwtSecret": "AHDRWA_jwt"
 }

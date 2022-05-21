@@ -4,11 +4,11 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const config = require('./config/default.json');
-const routes = require('./routes');
+const routes = require('./routes/routes');
 const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser')
 
-mongoose.connect(config.localMongoURI, { useNewUrlParser: true });
+mongoose.connect(config.hostedMongoURI, { useNewUrlParser: true });
 
 mongoose.connection.on('error', (err) => {
     console.log('Error in the database:', err);
