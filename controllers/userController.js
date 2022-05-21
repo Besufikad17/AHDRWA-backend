@@ -120,6 +120,8 @@ userController.getUserById = async(req,res) => {
     User.findOne({ _id: { $in: mongoose.Types.ObjectId(req.params.id) } }, function (err, user) {
         if (user) {
             res.json(user)
+        }else{
+            res.json({msg: "invalid id!"})
         }
 
         if (err) {
