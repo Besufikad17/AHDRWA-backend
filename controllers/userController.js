@@ -5,8 +5,9 @@ const userController = {};
 const mongoose = require('mongoose');
 const config = require('config');
 
+
 userController.signup = (req, res) => {
-    const { username, email, password, subscription } = req.body;
+    const { username, email, password } = req.body;
 
     //simple valemailation
     if (!username || !email || !password) {
@@ -55,10 +56,10 @@ userController.signup = (req, res) => {
 }
 
 userController.login = async (req, res) => {
-    
-    const { username, password} = req.body;
 
-    if(!username || !password){
+    const { username, password } = req.body;
+
+    if (!username || !password) {
         console.log('Please enter all fields');
         return res.status(400).json({ msg: 'Please enter all fields' });
     }
@@ -74,7 +75,7 @@ userController.login = async (req, res) => {
             res.status(500).send({ message: err });
             return;
         }
-        if (user) {  
+        if (user) {
             jwt.sign({ user }, 'secretKey', (err, token) => {
                 if (err) {
                     console.log(err);
@@ -93,10 +94,10 @@ userController.login = async (req, res) => {
     })
 }
 
-userController.updateSubscriptionLevel = async(req, res) => {
+userController.updateSubscriptionLevel = async (req, res) => {
     const { id, subscription_lvl } = req.body;
 
-    if(!id || !subscription_lvl){
+    if (!id || !subscription_lvl) {
         console.log('Please enter all fields');
         return res.status(400).json({ msg: 'Please enter all fields' });
     }
@@ -115,13 +116,13 @@ userController.updateSubscriptionLevel = async(req, res) => {
 
 }
 
-userController.getUserById = async(req,res) => {
+userController.getUserById = async (req, res) => {
     console.log(req.params)
     User.findOne({ _id: { $in: mongoose.Types.ObjectId(req.params.id) } }, function (err, user) {
         if (user) {
             res.json(user)
-        }else{
-            res.json({msg: "invalid id!"})
+        } else {
+            res.json({ msg: "invalid id!" })
         }
 
         if (err) {
@@ -129,5 +130,6 @@ userController.getUserById = async(req,res) => {
         }
     })
 }
+
 
 module.exports = userController;
