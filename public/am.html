@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div id="trapezoid">
+          <a class="sub-home" href="#">፱፻፲፫</a>
+          <a href="#" class="expandHome">መነሻ ገፅ</a>
+          <a href="index.html" class="expandHome">ቋንቋ</a>
+          <a href="#About" class="expandHome">ስለ</a>
+           <div class="subnav">
+           <button class="subnavbtn">ደንበኞች<i class="fa fa-caret-down"></i></button>
+             <div class="subnav-content">
+              <div id="subnav-trapezoid">
+                <a href="#Clients">መደበኛ</a>
+                <a href="#Clients">ፕሪሚየም</a>
+                <a href="#Clients">ፕላቲኒየም</a>
+              </div>
+             </div>
+          </div>
+        
+           <div class="subnav">
+           <button class="subnavbtn">አበልፃጊዎች<i class="fa fa-caret-down"></i></button>
+             <div class="subnav-content">
+              <div class="subnav-trapezoid">
+                <a href="#Developers">በሱፍቃድ ሚ.</a>
+                <a href="#Developers">ታምራት አ.</a>
+                <a href="#Developers">ሚኪያስ ጎ.</a>
+               </div>
+             </div>
+            </div>
+          <!-- <a href="https://mikigode.github.io/portfolio/am.html" class="expandHome">Contact</a> -->
+        </div>
+      </nav>
+      
+      <section id="About">
+        <h1>ስለ ዌብሳይት</h1>
+        <hr> 
+        <p>በሜይ 20 -22፣2022 በCESC ASTU Development ክፍል አባላት Hackthon በሙከረም አሊ በተሰራው <a href="https://github.com/mukerem/AmharicHandwrittenDigitRecognitionMobileApp/tree/master" >Machine learning </a>መተግበሪያ ላይ የተመሰረተ ፕሮጀክት ነው::</p>
+      </section>
+      <section id="Clients">
+         <h1>ደንበኞች</h1>
+         <p>ደንበኞቻችን ሶስት አገልግሎቶች አሏቸው፣ የመጀመሪያው አገልግሎት ስታንዳርድ ተብሎ የሚጠራ ሲሆን ለደንበኞቻችን መደበኛ አገልግሎት ይሰጣል ይህም ማለት በቀን 10 ጥያቄዎችን ይፈቅዳሉ። ሁለተኛው የደንበኞች አገልግሎት ፕሪሚየም ተብሎ የሚጠራ ሲሆን ከመደበኛ በላይ ተጨማሪ አገልግሎቶች ይሰጣል እና በቀን 50 ጠያቂ እና የJSON ግብዓት መፍቀድ ይችላሉ። የመጨረሻው እና የፕላቲኒየም ተጠቃሚ አገልግሎት ልዩ ነው እና ለተጠቃሚዎች ብዙ አሃዛዊ አሃዞችን እና የ JSON ግብአት ማግኘት እንዲችሉ ብቻ ሳይሆን ያልተገደበ አገልግሎት ይሰጣል።</p>
+        <hr> 
+      </section>
+      <section id="Developers">
+          <h1>አበልፃጊዎች</h1>
+<head>
+  <style media="screen">
+
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Exo;
+   }
+   @font-face {
+     font-family: Exo;
+     src: url(./fonts/Exo2.0-Medium.otf);
+   }
+   .main{
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   .profile-card{
+     position: relative;
+     font-family: sans-serif;
+     width: 220px;
+     height: 220px;
+     background: linear-gradient(to right, #ff00cc, #333399);;
+     padding: 30px;
+     border-radius: 50%;
+     box-shadow: 0 0 22px #3336;
+     transition: .6s;
+     margin: 0 25px;
+   }
+   .profile-card:hover{
+     border-radius: 10px;
+     height: 260px;
+   }
+   .profile-card .img{
+     position: relative;
+     width: 100%;
+     height: 100%;
+     transition: .6s;
+     z-index: 99;
+   }
+   .profile-card:hover .img{
+     transform: translateY(-60px);
+   }
+   .img img{
+     width: 100%;
+     border-radius: 50%;
+     box-shadow: 0 0 22px #3336;
+     transition: .6s;
+   }
+   .profile-card:hover img{
+     border-radius: 10px;
+   }
+   .caption{
+     text-align: center;
+     transform: translateY(-80px);
+     opacity: 0;
+     transition: .6s;
+   }
+   .profile-card:hover .caption{
+     opacity: 1;
+   }
+   .caption h3{
+     font-size: 21px;
+     font-family: sans-serif;
+   }
+   .caption p{
+     font-size: 15px;
+     color: #d0d5da;
+     font-family: sans-serif;
+     margin: 2px 0 9px 0;
+   }
+   .caption .social-links a{
+     color: rgb(231, 221, 221);
+     margin-right: 15px;
+     font-size: 21px;
+     transition: .6s;
+   }
+   .social-links a:hover{
+     color: #0c52a1;
+   }
+
+  </style>
+
+</head>
+
+
+    <div class="main">
+        <div class="profile-card">
+            <div class="img">
+                <img src="images.png">
+            </div>
+            <div class="caption">
+                <h3> ቢኒ </h3>
+                <p>fullstack Developer</p>
+                <div class="social-links">
+                    <a href="https://github.com/binitech"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/tamirat-ayalew-500b58235/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/techbini"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="img">
+                <img src="images.png">
+            </div>
+            <div class="caption">
+                <h3>ሚኪጎዴ</h3>
+                <p>Front End Developer</p>
+                <div class="social-links">
+                    <a href="https://github.com/mikigode"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/miki-gode-12330422b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/mikigode"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="img">
+                <img src="images.png">
+            </div>
+            <div class="caption">
+                <h3>በሱ</h3>
+                <p>backend Developer</p>
+                <div class="social-links">
+                    <a href="Github https://github.com/Besufikad17/"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/besufikad-tilahun-6592281b4"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/besumicheal"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+      </section>
+    <script src="script.js"></script>
+</body>
+</html>
