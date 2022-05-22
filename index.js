@@ -35,7 +35,5 @@ app.get('/', (req,res) => {
     res.send('<h1>Welcome to AHDRWA backend<a href="/static">Docs</a><h2>')
   })
 
-app.use(express.static(__dirname + '/public'));
-app.use('/static', express.static('public'))
 
 app.listen(PORT);
